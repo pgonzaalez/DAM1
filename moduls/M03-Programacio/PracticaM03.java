@@ -1,6 +1,7 @@
 import java.util.Scanner;
 public class PracticaM03 {
-
+    
+    // @author pgonzalez
 
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
@@ -240,11 +241,11 @@ public class PracticaM03 {
 
     }
 
-    public static void defineGanador(char vacio, char player1, int tipo) {
+    public static void defineGanador(char simbolo, char player1, int tipo) {
 
         switch (tipo) {
             case 1:
-                if (vacio == player1) {
+                if (simbolo == player1) {
                     System.out.println("Ha ganado el Jugador 1");
                 } else {
                     System.out.println("Ha ganado el Jugador 2");
@@ -252,14 +253,14 @@ public class PracticaM03 {
 
                 break;
             case 2:
-                if (vacio == player1) {
+                if (simbolo == player1) {
                     System.out.println("Ha ganado el Jugador 2");
                 } else {
                     System.out.println("Ha ganado el Jugador 1");
                 }
                 break;
             case 3:
-                if (vacio == player1) {
+                if (simbolo == player1) {
                     System.out.println("Ha ganado el Jugador 2 ");
                 } else {
                     System.out.println("Ha ganado el Jugador 1 ");
