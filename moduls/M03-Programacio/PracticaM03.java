@@ -1,6 +1,6 @@
 import java.util.Scanner;
 public class PracticaM03 {
-    
+
     // @author pgonzalez
 
     public static void main(String[] args) {
@@ -43,48 +43,48 @@ public class PracticaM03 {
             } else {
 
 
-            while (!acabaPartida(tablero, vacio)) {
-                do {
-                    mostrarTurnoActual(turno);
-                    mostraTablero(tablero);
-                    correcto = false;
+                while (!acabaPartida(tablero, vacio)) {
+                    do {
+                        mostrarTurnoActual(turno);
+                        mostraTablero(tablero);
+                        correcto = false;
 
-                    System.out.println(ANSI_PURPLE + "------------" + ANSI_RESET);
-                    System.out.println(ANSI_YELLOW + "Introdueix la fila  [0 - 2]" + ANSI_RESET);
-                    fila = in.nextInt();
-                    System.out.println(ANSI_PURPLE + "------------" + ANSI_RESET);
-                    System.out.println(ANSI_YELLOW + "Introdueix la columna [0 - 2]" + ANSI_RESET);
-                    columna = in.nextInt();
+                        System.out.println(ANSI_PURPLE + "------------" + ANSI_RESET);
+                        System.out.println(ANSI_YELLOW + "Introdueix la fila  [0 - 2]" + ANSI_RESET);
+                        fila = in.nextInt();
+                        System.out.println(ANSI_PURPLE + "------------" + ANSI_RESET);
+                        System.out.println(ANSI_YELLOW + "Introdueix la columna [0 - 2]" + ANSI_RESET);
+                        columna = in.nextInt();
 
-                    posValida = validarPosicion(tablero, fila, columna);
+                        posValida = validarPosicion(tablero, fila, columna);
 
-                    if (posValida) {
+                        if (posValida) {
 
-                        //Si no hay marca, significa que es correcto
-                        if (!comprobaPosicion(tablero, fila, columna, vacio)) {
-                            correcto = true;
+                            //Si no hay marca, significa que es correcto
+                            if (!comprobaPosicion(tablero, fila, columna, vacio)) {
+                                correcto = true;
+                            } else {
+                                System.out.println("Esa casilla ya esta elegida");
+                            }
                         } else {
-                            System.out.println("Esa casilla ya esta elegida");
+                            System.out.println("La posicion escogida no es valida en el tablero");
                         }
+
+                    } while (!correcto);
+
+                    if (turno) {
+                        insertarValor(tablero, fila, columna, player1);
                     } else {
-                        System.out.println("La posicion escogida no es valida en el tablero");
+                        insertarValor(tablero, fila, columna, player2);
                     }
 
-                } while (!correcto);
 
-                if (turno) {
-                    insertarValor(tablero, fila, columna, player1);
-                } else {
-                    insertarValor(tablero, fila, columna, player2);
+                    turno = !turno;
                 }
 
+                mostraTablero(tablero);
 
-                turno = !turno;
-            }
-
-            mostraTablero(tablero);
-
-            mostraGanador(tablero, player1, player2, vacio);
+                mostraGanador(tablero, player1, player2, vacio);
 
             }
         } while(tornaJugar.equals("Si"));
@@ -321,14 +321,8 @@ public class PracticaM03 {
 
 
     // Metodes per els colors
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
     public static final String ANSI_GREEN = "\u001B[32m";
     public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
     public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
     public static final String ANSI_RESET = "\u001B[0m";
-
 }
