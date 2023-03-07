@@ -13,7 +13,7 @@ public class PracticaM03 {
 
         char tablero[][] = new char[3][3];
 
-        rellenarTablero(tablero, vacio);
+
 
         int fila, columna;
         boolean posValida, correcto;
@@ -38,6 +38,7 @@ public class PracticaM03 {
         do {
             System.out.println("Vols començar a jugar?");
             tornaJugar = in.next();
+            rellenarTablero(tablero, vacio);
             if ( tornaJugar.equals("No")) {
 
             } else {
@@ -150,7 +151,7 @@ public class PracticaM03 {
             coincidencia = true;
             valorMatriu = tablero[i][0];
             if (valorMatriu != vacio) {
-                for (int j = 1; j < tablero[0].length; j++) {
+                for (int j = 1; j < tablero.length; j++) {
                     if (valorMatriu != tablero[i][j]) {
                         coincidencia = false;
                     }
@@ -176,7 +177,7 @@ public class PracticaM03 {
 
             valorMatriu = tablero[0][j];
             if (valorMatriu != vacio) {
-                for (int i = 1; i < tablero[0].length; i++) {
+                for (int i = 1; i < tablero.length; i++) {
                     if (valorMatriu != tablero[i][j]) {
                         coincidencia = false;
                     }
