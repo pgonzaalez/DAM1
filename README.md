@@ -4,7 +4,7 @@ Aquest és el meu portfoli dels meus estudis del *Cicle Superior de Desenvolupam
 
 Els meus estudis de Dam els vaig fer a l'institut Nicolau Copèrnic:
 
-<img src=https://copernic.cat/images/logos/logo-headeer.png width="150" alt="logo INS Copèrnic">
+<img src=https://copernic.cat/images/logos/logo-header.png width="150" alt=" Logo INS Copèrnic">
 
 Els mòduls que he fet són:
 - [M01-Sistemes informàtics](https://github.com/pgonzaalez/portfoli/tree/main/moduls/M01-SistemasInformatics)
