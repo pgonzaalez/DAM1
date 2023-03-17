@@ -1,6 +1,9 @@
 ### **Portfoli**
 
-Aquest és el meu portfoli dels meus estudis del *Cicle Superior de Desenvolupament d'Aplicacions Multiplataforma*.
+Aquest és el meu portfoli dels meus estudis del *Cicle Superior de Desenvolupament d'Aplicacions Multiplataforma (DAM)*.
+
+Els meus estudis de Dam els vaig fer a l'institut Nicolau Copèrnic:
+![Institut Nicolau Copèrnic](https://copernic.cat/images/logos/logo-header.png)
 
 Els mòduls que he fet són:
 - [M01-Sistemes informàtics](https://github.com/pgonzaalez/portfoli/tree/main/moduls/M01-SistemasInformatics)
