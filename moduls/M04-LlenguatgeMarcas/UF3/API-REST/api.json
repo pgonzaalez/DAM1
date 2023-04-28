@@ -1,0 +1,14 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "titulo": "Api Fake",
+      "autor": 1
+    },
+    {
+      "id": 2,
+      "titulo": "Pol Gonzalez",
+      "autor": 2
+    }
+  ]
+}

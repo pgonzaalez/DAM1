@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  version="2.0"> 
+    <channel>
+        <title>Restaurants</title>
+        <link>https://www.portaventuraworld.com/restaurantes</link>
+        <category>Restaurants</category>
+        <description>Los restaurantes de PortAventura Park encontrarás lo que te apetezca comer en todo momento. 
+        ¡Hay opciones para todos los gustos!</description>
+        <skipHours>
+                <hour>0</hour>
+                <hour>1</hour>
+                <hour>2</hour>
+                <hour>3</hour>
+                <hour>4</hour>
+                <hour>5</hour>
+                <hour>6</hour>
+                <hour>7</hour>
+                <hour>8</hour>
+                <hour>9</hour>
+                <hour>11</hour>
+                <hour>12</hour>
+                <hour>13</hour>
+                <hour>14</hour>
+                <hour>15</hour>
+                <hour>16</hour>
+                <hour>17</hour>
+                <hour>18</hour>
+                <hour>19</hour>
+                <hour>20</hour>
+                <hour>21</hour>
+                <hour>22</hour>
+                <hour>23</hour>
+        </skipHours>
+        <item>
+            <title>Bora Bora</title>
+            <category>Zona Polynesia, Poke y comida japonesa</category>
+            <description>
+                <![CDATA[
+                <img src="https://zoomdestinos.es/wp-content/uploads/2022/06/Restaurante-Bora-Bora_3.jpg"/>
+                <p>Un restaurante temático situado en el área de Polynesia,el restaurante ofrece una selección de platos polinesios y del sudeste asiático.</p>
+                ]]>
+            </description>
+            <link>https://www.portaventuraworld.com/restaurantes/bora-bora</link>
+        </item>
+        <item>
+            <title>La Cantina</title>
+            <category>Zona México, comida mexicanca</category>
+            <description>
+                <![CDATA[
+                <img src="https://www.parquetematico.net/wp-content/uploads/2020/02/Interior-del-restaurante-La-Cantina-de-PortAventura.jpeg"/>
+                <p>La Cantina es un restaurante ubicado en el área temática de México,
+                la cocina es mexicana, con platos como tacos, burritos, nachos y quesadillas</p>
+                 ]]>
+                </description>
+            <link>https://www.portaventuraworld.com/restaurantes/la-cantina</link>
+        </item>
+        <item>
+            <title>La Hacienda El Charro</title>
+            <category>Zona México, comida mexicana</category>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/74bcdc255d00cf485fa2214a2ebbf7431f840554c5115704add8834d753ec5d2.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="La Hacienda El Charro"/>
+                <p>Restaurant temàtic de Mèxic amb menús inspirats en la cuina mexicana tradicional. Ofereix menús
+                    per a nens i servei de bufet.</p>
+                ]]>
+            </description>
+            <link>https://www.portaventuraworld.com/restaurantes/hacienda-el-charro</link>
+        </item>
+        <item>
+            <title>Restaurant Marco Polo</title>
+            <category>Zona China, comida variada</category>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/05fc82032607d88786acfa0c1e97d85c244f8cfa2705112ad9f545d677650d15.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Restaurant Marco Polo"/>
+                <p>Restaurant temàtic de Xina amb menús inspirats en la cuina xinesa. Ofereix menús per a nens i
+                    servei de bufet</p>
+                ]]>
+            </description>
+            <link>https://www.portaventuraworld.com/restaurantes/marco-polo</link>
+        </item>
+    </channel>
+</rss>

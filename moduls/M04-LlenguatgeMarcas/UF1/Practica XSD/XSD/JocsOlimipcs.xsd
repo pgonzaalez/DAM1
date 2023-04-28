@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="JocsOlimpics.xml">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="jocsOlimpics">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:string" name="edicio"/>
+              <xs:element type="xs:string" name="pais"/>
+              <xs:element type="xs:string" name="web"/>
+              <xs:element name="participants">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:short" name="paisos"/>
+                    <xs:element type="xs:float" name="esportistes"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="data" maxOccurs="unbounded" minOccurs="0">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element type="xs:string" name="valor"/>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="id" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+              <xs:element name="seus" maxOccurs="unbounded" minOccurs="0">
+                <xs:annotation>
+                  <xs:documentation> Seus on no s'han realitzat competicions  Seus on s'han realitzat competicions </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="seu" maxOccurs="unbounded" minOccurs="0">
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="acollits" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:string" name="acollit" maxOccurs="unbounded" minOccurs="0"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:element type="xs:string" name="ciutat"/>
+                          <xs:element type="xs:string" name="edifici" minOccurs="0"/>
+                          <xs:element type="xs:string" name="funcionalitat" minOccurs="0"/>
+                          <xs:element type="xs:short" name="capacitat" minOccurs="0"/>
+                          <xs:element name="esport" minOccurs="0">
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element type="xs:short" name="anyInici"/>
+                                <xs:element name="data" maxOccurs="unbounded" minOccurs="0">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element type="xs:string" name="valor"/>
+                                    </xs:sequence>
+                                    <xs:attribute type="xs:string" name="id" use="optional"/>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:element name="categories">
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="categoria" maxOccurs="unbounded" minOccurs="0">
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="sexe" maxOccurs="unbounded" minOccurs="0">
+                                              <xs:complexType>
+                                                <xs:sequence>
+                                                  <xs:element name="medalla" maxOccurs="unbounded" minOccurs="0">
+                                                    <xs:complexType>
+                                                      <xs:sequence>
+                                                        <xs:element type="xs:string" name="pais"/>
+                                                        <xs:element name="esportistes">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:element type="xs:string" name="nom" maxOccurs="unbounded" minOccurs="0"/>
+                                                            </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element name="data">
+                                                          <xs:complexType>
+                                                            <xs:sequence>
+                                                              <xs:element type="xs:string" name="valor"/>
+                                                            </xs:sequence>
+                                                          </xs:complexType>
+                                                        </xs:element>
+                                                        <xs:element type="xs:string" name="hora"/>
+                                                        <xs:element type="xs:string" name="lloc"/>
+                                                      </xs:sequence>
+                                                      <xs:attribute type="xs:string" name="id" use="optional"/>
+                                                    </xs:complexType>
+                                                  </xs:element>
+                                                </xs:sequence>
+                                                <xs:attribute type="xs:string" name="id" use="optional"/>
+                                              </xs:complexType>
+                                            </xs:element>
+                                          </xs:sequence>
+                                          <xs:attribute type="xs:string" name="nom" use="optional"/>
+                                        </xs:complexType>
+                                      </xs:element>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                              </xs:sequence>
+                              <xs:attribute type="xs:string" name="nom"/>
+                            </xs:complexType>
+                          </xs:element>
+                        </xs:sequence>
+                        <xs:attribute type="xs:string" name="nom" use="optional"/>
+                      </xs:complexType>
+                    </xs:element>
+                  </xs:sequence>
+                  <xs:attribute type="xs:string" name="competicions" use="optional"/>
+                </xs:complexType>
+              </xs:element>
+            </xs:sequence>
+            <xs:attribute type="xs:string" name="id"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

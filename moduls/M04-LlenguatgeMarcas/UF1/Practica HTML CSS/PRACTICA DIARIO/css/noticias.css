@@ -1,0 +1,58 @@
+
+.animacion {
+	width: 1280px;
+    height: auto;
+	margin:50px auto 0;
+	overflow: hidden;
+	padding-left: 40px;
+}
+
+.animacion ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: slide 20s infinite alternate ease-in-out;
+}
+
+.animacion li {
+	width: 100%;
+	list-style: none;
+	
+}
+
+
+
+@keyframes slide {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+
+img {
+	width: 75%;
+	height: 600px;
+	display:block;
+	margin:auto;
+}
+
+h3{
+	color: red;
+	font-size: 40px;
+	padding-bottom: 20px;
+}
+
+p{
+	color: white;
+	font-size: 20px;
+	padding: 30px;
+	text-align: justify;
+}

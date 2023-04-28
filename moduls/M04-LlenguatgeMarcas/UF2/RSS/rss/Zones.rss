@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  version="2.0">
+    <channel>
+        <title>Mapa de PortAventura</title>
+        
+        <link>https://www.portaventuraworld.com/ca/zones</link>
+        <description>En aquest apartat trobem totes les zones del parc.</description>
+        <item>
+            <title>Far West</title>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/f8000e5381ef1a474f5124ff14de05c338db1fe3d632c60d9f24b4e3ed0225ad.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Far West"/>
+                <p>Zona ambientada en l'Oest americà, on es poden trobar atraccions com el Silver River Flume o el Tomahawk.</p>
+                ]]>
+                 </description>
+            <link>https://www.portaventuraworld.com/ca/zones/far-west</link>
+        </item>
+        
+        <item>
+            <title>Mediterrània</title>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/5235fe98605421220e1951c6c2c1746f68438cb2a4c4347aa2a91c937bbf138b.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Mediterrània"/>
+                <p>Zona ambientada en un poble mediterrani, on es poden trobar atraccions com el Furius Baco o el Templo del Fuego.</p>
+                ]]>
+                </description>
+            <link>https://www.portaventuraworld.com/ca/zones/mediterrania</link>
+        </item>
+        <item>
+            <title>Polynesia</title>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/55d22e27d0ed0ac9577fcfad672af12ca32e0116d8e6b3547c1e5931319f9306.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Polynesia"/>
+                <p>Zona ambientada en les illes del Pacífic, on es poden trobar atraccions com el Tutuki Splash o el Kima Bay. </p>
+                ]]>
+                 </description>
+            <link>https://www.portaventuraworld.com/ca/zones/polynesia</link>
+        </item>
+        <item>
+            <title>China</title>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/1a7dbbe52a6190cbfa4a6d50418fae167f7473916ec31f5f6aa799f397b7ea88.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="China"/>
+                <p>Zona ambientada en les ciutats i paisatges de la Xina, on es poden trobar atraccions com el Dragon Khan o el Shambhala.</p>
+                ]]>
+                </description>
+            <link>https://www.portaventuraworld.com/ca/zones/china</link>
+        </item>
+        <item>
+            <title>Sesame Aventura</title>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/157749995bb8ea21116874e3e1354b6b9680ea9cc5f6feda80715ac701ddcf37.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Sesame Street"/>
+                <p>Zona temàtica dedicada als personatges de Barri Sèsam, on es poden trobar atraccions com el Magic Fish o el Coco Piloto.</p>
+                ]]>
+                </description>
+            <link>https://www.portaventuraworld.com/ca/portaventura/sesamo-aventura</link>
+        </item>
+        <item>
+            <title>Mexico</title>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/74023407be7b03546c32e6b2a7675ea309ed7fe0639df10f9c708fc96e76f717.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Mexico"/>
+                <p>Zona ambientada en Mexico, on es poden trobar atraccions com el Hurakan Condor o el tren de la mina. </p>
+                ]]>
+                </description>
+            <link>https://www.portaventuraworld.com/ca/portaventura/mexico</link>
+        </item>
+    </channel>
+    </rss>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+
+    <channel>
+        <title>Atraccions</title>
+        <category>Atraccions del parc</category>
+        <description>Un sinfín de atracciones donde disfrutarás al máximo de cada momento.</description>
+        <link>https://www.portaventuraworld.com/atracciones</link>
+        <skipDays>
+            <day>Friday</day>
+            <day>Saturday</day>
+            <day>Sunday</day>
+        </skipDays>
+        <skipHours>
+            <hour>9</hour>
+            <hour>10</hour>
+            <hour>11</hour>
+            <hour>12</hour>
+            <hour>13</hour>
+            <hour>14</hour>
+            <hour>15</hour>
+            <hour>16</hour>
+        </skipHours>
+        <item>
+            <title>Tutuki Splash</title>
+            <category>Zona Polynesia, Atracción moderada</category>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/1470f75b4a69212ec510a0305d67a8005853a3b9bae2634b8606d857acc42ee8.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Tutuki Splash"/>
+                <p>Es una atracción acuática situada en la Polynesia. 
+                Los pasajeros suben a bordo de un bote que se desliza por una pendiente empinada antes de sumergirse en una piscina de agua. 
+                </p>
+                ]]>
+            </description>
+            <link>https://www.portaventuraworld.com/atracciones/tutuki-splash</link>
+        </item>
+        <item>
+            <title>Hurakan Condor</title>
+            <category>Zona México, Atracción Fuerte</category>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/b63b7bca036d0e8d0172dad23822c7db7950e8bd9a9f95af5bc534c338a22e53.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Hurakan Condor"/>
+                <p>Al llegar al área de México de PortAventura verás una gran torre de más de 100 metros de altura que convierte a la atracción en la más imponente del parque. </p>]]>
+            </description>
+            <link>https://www.portaventuraworld.com/atracciones/hurakan-condor</link>
+        </item>
+        <item>
+            <title>Shambhala</title>
+            <category>Zona China, Atracción fuerte</category>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/9f1dfe51fb72ac66e713e724ff962934ed830c94ad8d51828085f7b8c4f242bd.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Shambhala"/>
+                <p> Encontramos esta atracción en el área de China,  que combina la emoción de una montaña rusa con una tematización única e inmersiva.
+                 ]]>
+            </description>
+            <link>https://www.portaventuraworld.com/atracciones/shambhala</link>
+        </item>
+        <item>
+            <title>Dragon Khan</title>
+            <category>Zona China, Atracción fuerte</category>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/76a4bcaad2744c2f6bb3484156f09ef5d62db53ef85bdba0da689befb76f611b.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Dragon Khan"/>
+                <p>La montaña rusa con ocho bucles y una velocidad de 110 km/h, se encuentra en una región de China y ofrece una experiencia de alta intensidad.</p>
+                ]]>
+            </description>
+            <link>https://www.portaventuraworld.com/atracciones/dragon-khan</link>
+        </item>
+    </channel>
+</rss>

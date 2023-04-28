@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  version="2.0">
+<!--Com a 4t feed trobem les Botigues-->
+    <channel>
+        <title>Botigues</title>
+        <category>Botigues del parc</category>
+        <link>https://www.portaventuraworld.com/tiendas</link>
+        <description>No solo podrás vivir emociones intensas y descargar adrenalina de forma insuperable; ¡también tendrás la oportunidad de ir de compras durante la visita!</description>
+        <skipDays>
+            <day>Monday</day>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+        </skipDays>
+        <item>
+            <title>Cal caramel</title>
+            <category>Zona Mediterrània, Golosinas</category>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/72f5a997792e244f0d00df77b3f6a6307ea0910b6d976c6b3bbdd66f52e5173a.png?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Botiga Cal Caramel"/>
+                <p> Tienda de caramelos situada en la zona Mediterrania, donde puedes elegir con surtido infinito de golosinas</p>
+                ]]>
+                </description>
+            <link>https://www.portaventuraworld.com/tiendas/dolcos-mes</link>
+        </item>
+        <item>
+            <title>Hurakan Condor Shop</title>
+            <category>Zona México, Photoride</category>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/166eb504f938cfd50b6293e5ab8a70dfceec9328479cec60b3be0645896f2a0e.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Hurakan Condor Shop"/>
+                <p>Tienda situada en Mexico donde puedes encontra desde camisetas con originales estampados hasta peluches, 
+                tazas y gorras de recuerdo. </p>
+                ]]>
+                </description>
+            <link>https://www.portaventuraworld.com/tiendas/hurakan-condor-shop</link>
+        </item>
+      
+        <item>
+            <title>General Store</title>
+            <category>Zona Far West, Souvenirs.</category>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/a9e129bcd0b68c3ca9d61c57297f504b7fb7818d898857c61fe0b2680fd0b98e.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Tienda General Store"/>
+                <p>Tienda situada en el Far West, todos los personajes de PortAventura World te están esperando en una tienda llena de divertidos productos. 
+                </p>
+                ]]>
+                </description>
+    
+            <link>https://www.portaventuraworld.com/tiendas/general-store</link>
+        </item>
+        <item>
+            <title>Chikitienda</title>
+            <category>Zona Mediterrània, Souvenirs.</category>
+            <description>
+                <![CDATA[
+                <img src="https://media.portaventuraworld.com/mediaManager/image/835c55b124f1655f8261eaba73f6a20220994dc1c4d25bb6dbd2822b6c169803.jpg?tx=ar_1.86,c_crop/w_335,h_180,c_fit" alt="Botiga de joguines de SésamoAventura"/>
+                <p>Botiga situada a la zona de SésamoAventura que ven joguines i peluixos de la sèrie de televisió.</p>
+                ]]>
+                </description>
+            
+            <link>https://www.portaventuraworld.com/ca/botigues/chikitienda</link>
+        </item>
+    </channel>
+    </rss>

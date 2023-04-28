@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<JocsOlimpics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="JocsOlimpics.xsd">
+
+    <jocsOlimpics id="Tokio 2020">
+        <edicio>XXXII</edicio>
+        <pais>Japó</pais>
+        <web>https://olympics.com/tokyo-2020/es/</web>
+        <participants>
+            <paisos>205</paisos>
+            <esportistes>11.326</esportistes>
+        </participants>
+        <data id="obertura">
+            <valor>23/07/2021</valor>
+        </data>
+        <data id="clausura">
+            <valor>08/08/2021</valor>
+        </data>
+        <!-- Seus on no s'han realitzat competicions -->
+        <seus competicions="No">
+            <seu nom="Estadi Olímpic">
+                <acollits>
+                    <acollit>Cerimònia d'obertura</acollit>
+                    <acollit>Cerimònia de clausura</acollit>
+                </acollits>
+                <ciutat>Tokio</ciutat>
+                <edifici>Estadi</edifici>
+                <funcionalitat>Estadi d'esdeveniments esportius</funcionalitat>
+            </seu>
+            <seu nom="Hotel Imperial">
+                <acollits>
+                    <acollit>COI</acollit>
+                </acollits>
+                <ciutat>Tokio</ciutat>
+                <edifici>Hotel</edifici>
+                <funcionalitat>Hotel</funcionalitat>
+            </seu>
+            <seu nom="Harumi Futō">
+                <acollits>
+                    <acollit>Vila olímpica</acollit>
+                </acollits>
+                <ciutat>Tokio</ciutat>
+                <edifici>Zona residencial</edifici>
+                <funcionalitat>Barri residencial</funcionalitat>
+            </seu>
+        </seus>
+        <!-- Seus on s'han realitzat competicions -->
+        <seus competicions="Si">
+            <seu nom="Plaça esportiva Musashino Forest">
+                <ciutat>Tokio</ciutat>
+                <capacitat>7200</capacitat>
+                <esport nom="Bàdminton">
+                    <anyInici>1988</anyInici>
+                    <data id="inici">
+                        <valor>24/07/2021</valor>
+                    </data>
+                    <data id="final">
+                        <valor>02/08/2021</valor>
+                    </data>
+                    <categories>
+                        <categoria nom="Individual">
+                            <sexe id="M">
+                                <medalla id="Or">
+                                    <pais>Dinamarca</pais>
+                                    <esportistes>
+                                        <nom>Viktor Axelsen</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>02/08/2021</valor>
+                                    </data>
+                                    <hora>20:50</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                                <medalla id="Argent">
+                                    <pais>Xina</pais>
+                                    <esportistes>
+                                        <nom>Chen Long</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>02/08/2021</valor>
+                                    </data>
+                                    <hora>20:50</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                                <medalla id="Bronze">
+                                    <pais>Indonèsia</pais>
+                                    <esportistes>
+                                        <nom>Anthony Ginting</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>02/08/2021</valor>
+                                    </data>
+                                    <hora>20:00</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                            </sexe>
+                            <sexe id="F">
+                                <medalla id="Or">
+                                    <pais>Xina</pais>
+                                    <esportistes>
+                                        <nom>Yu Fei Chen</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>01/08/2021</valor>
+                                    </data>
+                                    <hora>21:20</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                                <medalla id="Argent">
+                                    <pais>Xina</pais>
+                                    <esportistes>
+                                        <nom>Tzu-Ying Tai</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>01/08/2021</valor>
+                                    </data>
+                                    <hora>21:20</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                                <medalla id="Bronze">
+                                    <pais>India</pais>
+                                    <esportistes>
+                                        <nom>Sindhu Pursala</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>01/08/2021</valor>
+                                    </data>
+                                    <hora>20:30</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                            </sexe>
+                        </categoria>
+                        <categoria nom="Parelles">
+                            <sexe id="M">
+                                <medalla id="Or">
+                                    <pais>Xina</pais>
+                                    <esportistes>
+                                        <nom>Yang Lee</nom>
+                                        <nom>Chi-Lin Wang</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>31/07/2021</valor>
+                                    </data>
+                                    <hora>20:30</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                                <medalla id="Argent">
+                                    <pais>Xina</pais>
+                                    <esportistes>
+                                        <nom>Jun Hui Li</nom>
+                                        <nom>Yu Chen Liu</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>31/07/2021</valor>
+                                    </data>
+                                    <hora>20:30</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                                <medalla id="Bronze">
+                                    <pais>Malasia</pais>
+                                    <esportistes>
+                                        <nom>Aaron Chia</nom>
+                                        <nom>Wooi Yik Soh</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>31/07/2021</valor>
+                                    </data>
+                                    <hora>19:40</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                            </sexe>
+                            <sexe id="F">
+                                <medalla id="Or">
+                                    <pais>Indonèsia</pais>
+                                    <esportistes>
+                                        <nom>Apriyani Rahayu</nom>
+                                        <nom>Polii Greysia</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>02/08/2021</valor>
+                                    </data>
+                                    <hora>13:50</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                                <medalla id="Argent">
+                                    <pais>Xina</pais>
+                                    <esportistes>
+                                        <nom>Qing Chen Chen</nom>
+                                        <nom>Yi Fan Jia</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>02/08/2021</valor>
+                                    </data>
+                                    <hora>13:50</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                                <medalla id="Bronze">
+                                    <pais>Corea</pais>
+                                    <esportistes>
+                                        <nom>Soyeong Kim</nom>
+                                        <nom>Heeyong Kong</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>02/08/2021</valor>
+                                    </data>
+                                    <hora>13:00</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                            </sexe>
+                            <sexe id="Mix">
+                                <medalla id="Or">
+                                    <pais>Xina</pais>
+                                    <esportistes>
+                                        <nom>Dong Ping Huang</nom>
+                                        <nom>Yi Lyu Wang</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>30/07/2021</valor>
+                                    </data>
+                                    <hora>15:30</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                                <medalla id="Argent">
+                                    <pais>Xina</pais>
+                                    <esportistes>
+                                        <nom>Qiong Ya Huang</nom>
+                                        <nom>Si wei Zheng</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>30/07/2021</valor>
+                                    </data>
+                                    <hora>15:30</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                                <medalla id="Bronze">
+                                    <pais>Japó</pais>
+                                    <esportistes>
+                                        <nom>Arisa Higashino</nom>
+                                        <nom>Yuta Watanabe</nom>
+                                    </esportistes>
+                                    <data>
+                                        <valor>30/07/2021</valor>
+                                    </data>
+                                    <hora>10:30</hora>
+                                    <lloc>Pista 1</lloc>
+                                </medalla>
+                            </sexe>
+                        </categoria>
+                    </categories>
+                </esport>
+            </seu>
+        </seus>
+    </jocsOlimpics>
+</JocsOlimpics>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+    <channel>
+        <title>Horari i calendari</title>
+        <description>Los horarios y calendarios de PortAventura World, 
+        incluyendo todos nuestros parques temáticos y los hoteles tematizados.></description>
+        <skipDays>
+            <day>Tuesday</day>
+            <day>Wednesday</day>
+            <day>Thursday</day>
+            <day>Friday</day>
+            <day>Saturday</day>
+            <day>Sunday</day>
+        </skipDays>
+        <link>https://www.portaventuraworld.com/horarios-calendario</link>
+        <item>
+            <title>Horari i calendari</title>
+            <description>
+                <![CDATA[
+                <img src="https://pbs.twimg.com/media/FccvvB0X0AAuM6x?format=jpg&name=small" alt="Calendari"/>
+                <p>Una de las dudas más grandes a la hora de planificar una visita es… ¿Cuándo vamos? 
+                ¿En qué días hay menos colas?</p>
+                ]]>
+            </description>
+            <pubDate>Wed, 01 Feb 2023 12:00:00 +0100</pubDate>
+            <link>https://www.portaventuraworld.com/horarios-calendario</link>
+        </item>
+    </channel>
+</rss>
