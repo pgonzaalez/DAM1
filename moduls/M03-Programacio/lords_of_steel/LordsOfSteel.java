@@ -1,5 +1,7 @@
 package UF4.lords_of_steel;
 
+// Juan Francisco Flores Fernandez, Pol Gonzalez Miranda
+
 import java.util.Scanner;
 import java.util.ArrayList;
 
