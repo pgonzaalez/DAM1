@@ -1,13 +1,12 @@
-package UF3.practica;
+package UF3;
 
 import java.io.*;
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Scanner;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.*;
 
 public class TresEnRatlla {
 
-    // @author pgonzalez
     static Scanner in = new Scanner(System.in);
     private static final String RANKING_FILE = "ranking.txt";
     private static Map<String, Integer> ranking = new HashMap<>();
@@ -15,14 +14,14 @@ public class TresEnRatlla {
     public static final String ANSI_YELLOW = "\u001B[33m";
     public static final String ANSI_PURPLE = "\u001B[35m";
     public static final String ANSI_RESET = "\u001B[0m";
+    private static List<String> historico = new ArrayList<>();
+    private static final String HISTORICO_FILE = "rankingHistorico.txt";
 
     public static void main(String[] args) {
-        cargarRanking();
-        Scanner in = new Scanner(System.in);
+        cargarDatos();
 
         char NombreJugador1;
         char NombreJugador2;
-
 
         System.out.println(ANSI_PURPLE + "------------" + ANSI_RESET);
         System.out.println("BENVINGUTS AL 3 EN RATLLA");
@@ -53,12 +52,12 @@ public class TresEnRatlla {
                     System.out.println("Introdueix el nom del jugador 2:");
                     NombreJugador2 = in.next().charAt(0);
                     int puntsJugador2 = Jugador.getPunts(String.valueOf(NombreJugador2));
-                    if (punts == -1) {
+                    if (puntsJugador2 == -1) {
                         System.out.println("Benvingut " + NombreJugador2);
                     } else {
-                        System.out.println("Ets el jugador " + punts + " del ranking.");
+                        System.out.println("Ets el jugador " + puntsJugador2 + " del ranking.");
                     }
-                    jugar(NombreJugador1,NombreJugador2);
+                    jugar(NombreJugador1, NombreJugador2);
                     break;
                 case 2:
                     mostrarRanking();
@@ -74,10 +73,11 @@ public class TresEnRatlla {
                     break;
             }
         } while (opcion != 0);
-        guardarRanking();
+
+        guardarDatos();
     }
 
-    public static void jugar(char NombreJugador1, char NombreJugador2){
+    public static void jugar(char NombreJugador1, char NombreJugador2) {
         NombreJugador1 = 'X';
         NombreJugador2 = 'O';
         int PuntosJugador1 = 0;
@@ -92,10 +92,9 @@ public class TresEnRatlla {
 
         do {
             System.out.println("Vols començar a jugar? [s/n] ");
-            tornaJugar = in.next();
-            tornaJugar.toLowerCase();
+            tornaJugar = in.next().toLowerCase();
             rellenarTablero(tablero, vacio);
-            if ( tornaJugar.equals("n")) {
+            if (tornaJugar.equals("n")) {
             } else {
                 while (!acabaPartida(tablero, vacio)) {
                     do {
@@ -113,17 +112,14 @@ public class TresEnRatlla {
                         posValida = validarPosicion(tablero, fila, columna);
 
                         if (posValida) {
-
-                            //Si no hay marca, significa que es correcto
                             if (!comprobaPosicion(tablero, fila, columna, vacio)) {
                                 correcto = true;
                             } else {
-                                System.out.println("Esa casilla ya esta elegida");
+                                System.out.println("Aquesta casella ja està seleccionada");
                             }
                         } else {
-                            System.out.println("La posicion escogida no es valida en el tablero");
+                            System.out.println("La posició escollida no és vàlida en el tauler");
                         }
-
                     } while (!correcto);
 
                     if (turno) {
@@ -132,23 +128,20 @@ public class TresEnRatlla {
                         insertarValor(tablero, fila, columna, NombreJugador2);
                     }
 
-
                     turno = !turno;
                 }
 
                 mostraTablero(tablero);
-
-                String resultado = mostraGanador(tablero,NombreJugador1 ,vacio);
-
+                String resultado = mostraGanador(tablero, NombreJugador1, vacio);
 
                 if (resultado.equals("Empate")) {
                     System.out.println("La partida ha acabat amb un empat!");
                     PuntosJugador1 += 1;
                     PuntosJugador2 += 1;
-                } else if (resultado.equals("x")) {
+                } else if (resultado.equals("X")) {
                     System.out.println("Ha guanyat " + NombreJugador1 + "!");
                     PuntosJugador1 += 3;
-                } else if (resultado.equals("o")) {
+                } else if (resultado.equals("O")) {
                     System.out.println("Ha guanyat " + NombreJugador2 + "!");
                     PuntosJugador2 += 3;
                 }
@@ -157,10 +150,10 @@ public class TresEnRatlla {
                 ranking.put(String.valueOf(NombreJugador2), PuntosJugador2);
 
                 mostraGanador(tablero, NombreJugador1, vacio);
-
             }
-        } while(tornaJugar.equals("si"));
+        } while (tornaJugar.equals("s"));
     }
+
     public static void mostrarRanking() {
         System.out.println("RANKING\n");
 
@@ -182,7 +175,6 @@ public class TresEnRatlla {
             FileWriter fileWriter = new FileWriter(RANKING_FILE);
             BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
-            // Guardar ranking
             bufferedWriter.write("RANKING");
             bufferedWriter.newLine();
 
@@ -229,34 +221,123 @@ public class TresEnRatlla {
         }
     }
 
-    private static void MostraPartidesHistoricas() {
+    public static int contarPartidas(String jugador) {
+        int count = 0;
+
+        for (String partida : historico) {
+            if (partida.contains(jugador)) {
+                count++;
+            }
+        }
+
+        return count;
     }
 
+    private static void MostraPartidesHistoricas() {
+        System.out.println("HISTÒRIC DE PARTIDES\n");
 
+        if (historico.isEmpty()) {
+            System.out.println("No hi ha partides en l'històric.");
+        } else {
+            for (String partida : historico) {
+                System.out.println(partida);
+            }
+        }
 
+        System.out.println();
+    }
 
+    public static String getFechaActual() {
+        Date fecha = new Date();
+        DateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+        return formato.format(fecha);
+    }
 
+    public static void guardarHistorico() {
+        try {
+            FileWriter fileWriter = new FileWriter(HISTORICO_FILE);
+            BufferedWriter bufferedWriter = new BufferedWriter(fileWriter);
 
+            bufferedWriter.write("HISTORICO");
+            bufferedWriter.newLine();
 
+            if (!historico.isEmpty()) {
+                for (String partida : historico) {
+                    bufferedWriter.write(partida);
+                    bufferedWriter.newLine();
+                }
+            }
 
+            bufferedWriter.write("FIN_HISTORICO");
+            bufferedWriter.newLine();
 
+            bufferedWriter.close();
+        } catch (IOException e) {
+            System.out.println("Error al guardar el histórico de partidas.");
+            e.printStackTrace();
+        }
+    }
 
+    public static void cargarHistorico() {
+        try {
+            FileReader fileReader = new FileReader(HISTORICO_FILE);
+            BufferedReader bufferedReader = new BufferedReader(fileReader);
 
+            String line;
 
+            while ((line = bufferedReader.readLine()) != null) {
+                if (line.equals("HISTORICO")) {
+                    historico.clear();
+                    while (!(line = bufferedReader.readLine()).equals("FIN_HISTORICO")) {
+                        historico.add(line);
+                    }
+                }
+            }
 
+            bufferedReader.close();
+        } catch (FileNotFoundException e) {
+            System.out.println("No se encontró el archivo de histórico. Se creará uno nuevo al finalizar la ejecución.");
+        } catch (IOException e) {
+            System.out.println("Error al cargar el histórico de partidas.");
+            e.printStackTrace();
+        }
+    }
 
+    public static void cargarDatos() {
+        cargarRanking();
+        cargarHistorico();
+    }
 
+    public static void guardarDatos() {
+        guardarRanking();
+        guardarHistorico();
+    }
 
+    public static int obtenerPosicionJugador(String nombreJugador) {
+        List<String> rankingOrdenado = new ArrayList<>(ranking.keySet());
 
-    // Metodes del joc
+        rankingOrdenado.sort((jugador1, jugador2) -> {
+            int puntosJugador1 = ranking.get(jugador1);
+            int puntosJugador2 = ranking.get(jugador2);
+
+            if (puntosJugador1 != puntosJugador2) {
+                return Integer.compare(puntosJugador2, puntosJugador1);
+            } else {
+                return Integer.compare(contarPartidas(jugador1), contarPartidas(jugador2));
+            }
+        });
+
+        int posicion = rankingOrdenado.indexOf(nombreJugador);
+        return posicion != -1 ? posicion + 1 : -1;
+    }
+
+    // Métodos del juego
     public static void rellenarTablero(char[][] tablero, char vacio) {
-
         for (int i = 0; i < tablero.length; i++) {
             for (int j = 0; j < tablero.length; j++) {
                 tablero[i][j] = vacio;
             }
         }
-
     }
 
     public static void mostraTablero(char[][] tablero) {
@@ -267,32 +348,27 @@ public class TresEnRatlla {
             }
             System.out.println("|");
         }
-
     }
-    public static void mostrarTurnoActual(boolean turno) {
 
+    public static void mostrarTurnoActual(boolean turno) {
         if (turno) {
             System.out.println(ANSI_GREEN + "Le toca al jugador 1" + ANSI_RESET);
         } else {
             System.out.println(ANSI_GREEN + "Le toca al jugador 2" + ANSI_RESET);
         }
-
     }
 
     public static boolean validarPosicion(char[][] tablero, int fila, int columna) {
-
         if (fila >= 0 && fila < tablero.length && columna >= 0 && columna < tablero.length) {
             return true;
         }
         return false;
-
     }
 
     public static boolean comprobaPosicion(char[][] matriz, int fila, int columna, char vacio) {
         if (matriz[fila][columna] != vacio) {
             return true;
         }
-
         return false;
     }
 
@@ -301,12 +377,10 @@ public class TresEnRatlla {
     }
 
     public static char comprobaLinea(char[][] tablero, char vacio) {
-
         char valorMatriu;
         boolean coincidencia;
 
         for (int i = 0; i < tablero.length; i++) {
-
             coincidencia = true;
             valorMatriu = tablero[i][0];
             if (valorMatriu != vacio) {
@@ -318,22 +392,17 @@ public class TresEnRatlla {
                 if (coincidencia) {
                     return valorMatriu;
                 }
-
             }
-
         }
         return vacio;
-
     }
-    public static char comprobaColumna(char[][] tablero, char vacio) {
 
+    public static char comprobaColumna(char[][] tablero, char vacio) {
         char valorMatriu;
         boolean coincidencia;
 
         for (int j = 0; j < tablero.length; j++) {
-
             coincidencia = true;
-
             valorMatriu = tablero[0][j];
             if (valorMatriu != vacio) {
                 for (int i = 1; i < tablero.length; i++) {
@@ -344,20 +413,16 @@ public class TresEnRatlla {
                 if (coincidencia) {
                     return valorMatriu;
                 }
-
             }
-
         }
         return vacio;
-
     }
 
     public static char comprobaDiagonal(char[][] tablero, char vacio) {
-
         char valorMatriu;
         boolean coincidencia = true;
 
-        //Diagonal Esquerra-Dreta
+        // Diagonal Esquerra-Dreta
         valorMatriu = tablero[0][0];
         if (valorMatriu != vacio) {
             for (int i = 1; i < tablero.length; i++) {
@@ -368,10 +433,9 @@ public class TresEnRatlla {
             if (coincidencia) {
                 return valorMatriu;
             }
-
         }
 
-        //Diagonal Dreta-Esquerra
+        // Diagonal Dreta-Esquerra
         valorMatriu = tablero[0][2];
         if (valorMatriu != vacio) {
             for (int i = 1, j = 1; i < tablero.length; i++, j--) {
@@ -384,9 +448,7 @@ public class TresEnRatlla {
             }
         }
         return vacio;
-
     }
-
 
     public static boolean empate(char[][] matriz, char vacio) {
         for (int i = 0; i < matriz.length; i++) {
@@ -396,83 +458,58 @@ public class TresEnRatlla {
                 }
             }
         }
-
         return true;
-
     }
 
     public static void defineGanador(char simbolo, String player1, int tipo) {
-
         switch (tipo) {
             case 1:
-                if ( player1.equals(simbolo)) {
-                    System.out.println("Ha ganado el Jugador 1");
+                if (player1.equals(String.valueOf(simbolo))) {
+                    System.out.println("Ha guanyat el Jugador 1");
                 } else {
-                    System.out.println("Ha ganado el Jugador 2");
-                }
-
-                break;
-            case 2:
-                if (player1.equals(simbolo)) {
-                    System.out.println("Ha ganado el Jugador 2");
-                } else {
-                    System.out.println("Ha ganado el Jugador 1");
+                    System.out.println("Ha guanyat el Jugador 2");
                 }
                 break;
-            case 3:
-                if (player1.equals(simbolo)) {
-                    System.out.println("Ha ganado el Jugador 2 ");
+            case 2, 3:
+                if (player1.equals(String.valueOf(simbolo))) {
+                    System.out.println("Ha guanyat el Jugador 2");
                 } else {
-                    System.out.println("Ha ganado el Jugador 1 ");
+                    System.out.println("Ha guanyat el Jugador 1");
                 }
                 break;
         }
-
     }
 
-
     public static String mostraGanador(char[][] tablero, char player1, char vacio) {
-
         char simbolo = comprobaLinea(tablero, vacio);
 
         if (simbolo != vacio) {
-
-            defineGanador(vacio, String.valueOf(player1), 1);
-
+            defineGanador(simbolo, String.valueOf(player1), 1);
             return null;
-
         }
 
         simbolo = comprobaColumna(tablero, vacio);
 
         if (simbolo != vacio) {
-
-            defineGanador(vacio, String.valueOf(player1), 2);
-
+            defineGanador(simbolo, String.valueOf(player1), 2);
             return null;
-
         }
 
         simbolo = comprobaDiagonal(tablero, vacio);
 
         if (simbolo != vacio) {
-
-            defineGanador(vacio, String.valueOf(player1), 3);
+            defineGanador(simbolo, String.valueOf(player1), 3);
             return null;
-
         }
 
-        System.out.println("Hay empate");
-
+        System.out.println("Hi ha empat");
         return null;
     }
 
     public static boolean acabaPartida(char[][] matriz, char vacio) {
-
         if (empate(matriz, vacio) || comprobaLinea(matriz, vacio) != vacio || comprobaColumna(matriz, vacio) != vacio || comprobaDiagonal(matriz, vacio) != vacio) {
             return true;
         }
-
         return false;
     }
 }
