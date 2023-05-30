@@ -1,0 +1,6 @@
+Pol;Si
+Juan;Si
+Ferran;No
+Irene;No
+Ian;Si
+Judith;No

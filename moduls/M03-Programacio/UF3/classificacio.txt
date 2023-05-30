@@ -1,0 +1,20 @@
+Valencia:3
+Real Madrid:3
+Atlético Madrid:3
+Barcelona:3
+Sevilla:3
+Mallorca:1
+Betis:1
+Cádiz:1
+Levante:1
+Osasuna:1
+Espanyol:1
+Villareal:1
+Granada:1
+Elche:1
+Athletic:1
+Getafe:0
+Alavés:0
+Celta de Vigo:0
+Real Sociedad:0
+Rayo Vallecano:0
